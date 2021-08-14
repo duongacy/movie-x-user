@@ -1,0 +1,43 @@
+.film-block {
+    .slick-arrow {
+        display: block;
+        border: var(--light) solid 2px;
+        color: var(--light);
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        transition: all 0.5s;
+        &:hover {
+            background-color: var(--primary-dark);
+        }
+        &:active {
+            transform: translate(0, -50%) scale(0.9);
+        }
+        &::before {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 600;
+            font-size: 20px;
+            transition: all 0.5s;
+        }
+        z-index: 10;
+    }
+    .slick-prev {
+        left: -0.7rem;
+        &::before {
+            content: '\f053';
+        }
+    }
+    .slick-next {
+        right: -0.7rem;
+        &:before {
+            content: '\f054';
+        }
+    }
+    .slick-track {
+        display: flex;
+        // gap: 1rem;
+    }
+    .slick-dots {
+        bottom: 1rem;
+    }
+}
